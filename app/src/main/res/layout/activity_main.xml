@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Author : Sujanth Babu Guntupalli
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.princ.homework1.MainActivity">
+
+    <TextView
+        android:id="@+id/billTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/bill_total" />
+
+    <EditText
+        android:id="@+id/editBillVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/billTotal"
+        android:layout_alignBottom="@+id/billTotal"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/billTotal"
+        android:layout_toRightOf="@+id/billTotal"
+        android:ems="10"
+        android:digits="0123456789."
+        android:inputType="numberDecimal"
+        android:hint="@string/enter_bill_hint" />
+
+    <TextView
+        android:id="@+id/tipPerc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/billTotal"
+        android:layout_alignStart="@+id/billTotal"
+        android:layout_below="@+id/editBillVal"
+        android:layout_marginTop="11dp"
+        android:text="@string/tipPer" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tipPerc"
+        android:layout_toEndOf="@+id/billTotal"
+        android:layout_toRightOf="@+id/billTotal"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:id="@+id/tenrb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/tenPer" />
+
+        <RadioButton
+            android:id="@+id/fifteenrb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fifteenPer" />
+
+        <RadioButton
+            android:id="@+id/eighteenrb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eighteenPer" />
+
+        <RadioButton
+            android:id="@+id/customrb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customRB" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/customTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tipPerc"
+        android:layout_alignStart="@+id/tipPerc"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="20dp"
+        android:text="@string/customTV" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup"
+        android:max="50"
+        android:progress="25"
+        android:layout_alignTop="@+id/customTip" />
+
+    <TextView
+        android:id="@+id/cusPer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBar"
+        android:layout_toEndOf="@+id/seekBar"
+        android:layout_toRightOf="@+id/seekBar"
+        android:text="@string/tfPer" />
+
+    <TextView
+        android:id="@+id/tTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/customTip"
+        android:layout_alignStart="@+id/customTip"
+        android:layout_below="@+id/customTip"
+        android:layout_marginTop="29dp"
+        android:text="@string/Tip" />
+
+    <TextView
+        android:id="@+id/tTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tTip"
+        android:layout_alignStart="@+id/tTip"
+        android:layout_below="@+id/tTip"
+        android:layout_marginTop="28dp"
+        android:text="@string/Total" />
+
+    <TextView
+        android:id="@+id/eTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_alignTop="@+id/tTip"
+        android:text="@string/zero" />
+
+    <TextView
+        android:id="@+id/eTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tTotal"
+        android:layout_alignLeft="@+id/eTip"
+        android:layout_alignStart="@+id/eTip"
+        android:text="@string/zero" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eTotal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/exit" />
+</RelativeLayout>

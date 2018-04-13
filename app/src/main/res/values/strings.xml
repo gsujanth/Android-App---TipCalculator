@@ -1,0 +1,20 @@
+<!--
+  Author : Sujanth Babu Guntupalli
+-->
+
+<resources>
+    <string name="app_name">Homework1</string>
+    <string name="bill_total">Bill Total</string>
+    <string name="enter_bill_hint">Enter Bill Value</string>
+    <string name="tipPer">Tip %</string>
+    <string name="tenPer">10 %</string>
+    <string name="fifteenPer">15 %</string>
+    <string name="eighteenPer">18 %</string>
+    <string name="customRB">Custom</string>
+    <string name="customTV">Custom</string>
+    <string name="Tip">Tip</string>
+    <string name="Total">Total</string>
+    <string name="zero">0.00</string>
+    <string name="exit">Exit</string>
+    <string name="tfPer">25%</string>
+</resources>
